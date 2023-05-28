@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { TransactionHistoryTable, TableHeader, TableData, TableRow } from './TransactionHistory.styled'
 
-const TransactionHistory = ({ items }) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <TransactionHistoryTable>
       <thead>
@@ -34,5 +34,3 @@ TransactionHistory.propTypes = {
     })
   ).isRequired,
 };
-
-export default TransactionHistory;

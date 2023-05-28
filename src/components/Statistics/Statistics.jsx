@@ -1,13 +1,7 @@
 import PropTypes from 'prop-types';
-import { 
-  StatSection, 
-  Title, 
-  List, 
-  Item, 
-  Label, 
-  Percentage } from './Statistics.styled';
+import { StatSection, Title, List, Item, Label, Percentage } from './Statistics.styled';
 
-const Statistics = ({ title, stats }) => {
+export const Statistics = ({ title, stats }) => {
   const generateRandomColor = () => {
     return `rgb(${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)}, ${Math.floor(Math.random() * 256)})`;
   };
@@ -15,7 +9,6 @@ const Statistics = ({ title, stats }) => {
   return (
     <StatSection>
       {title && <Title>{title}</Title>}
-
       <List>
         {stats.map(stat => (
           <Item key={stat.id} style={{ backgroundColor: generateRandomColor() }}>
@@ -39,4 +32,3 @@ Statistics.propTypes = {
   ).isRequired,
 };
 
-export default Statistics;

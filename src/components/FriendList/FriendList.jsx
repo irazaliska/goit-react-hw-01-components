@@ -1,19 +1,12 @@
 import PropTypes from 'prop-types';
-import {
-  List,
-  Item,
-  IsOnline,
-  IsOffline,
-  Avatar,
-  Name,
-} from './FriendList.styled';
+import { List, Item, IsOnline, IsOffline, Avatar, Name } from './FriendList.styled';
 
-const FriendList = ({ friends }) => {
+export const FriendList = ({ friends }) => {
   return (
     <List>
       {friends.map(({ id, isOnline, avatar, name }) => (
         <Item key={id}>
-          {isOnline ? (<IsOnline></IsOnline>) : (<IsOffline></IsOffline>)}
+           {isOnline ? <IsOnline /> : <IsOffline />}
           <Avatar src={avatar} alt="User avatar" />
           <Name>{name}</Name>
         </Item>
@@ -24,7 +17,7 @@ const FriendList = ({ friends }) => {
 
 FriendList.propTypes = {
   friends: PropTypes.arrayOf(
-    PropTypes.exact({
+    PropTypes.shape({
       avatar: PropTypes.string.isRequired,
       name: PropTypes.string.isRequired,
       isOnline: PropTypes.bool.isRequired,
@@ -32,5 +25,3 @@ FriendList.propTypes = {
     })
   ),
 };
-
-export default FriendList;
