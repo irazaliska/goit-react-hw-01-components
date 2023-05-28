@@ -15,6 +15,13 @@ export const Item = styled.li`
   background-color: #f8f4ef;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 `
+export const Status = styled.span`
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  margin: 0 20px;
+  background-color: ${props => (props.isOnline ? '#4f8d4f' : '#ca2020')};
+`
 export const Avatar = styled.img`
   width: 40px;
 `
@@ -22,18 +29,4 @@ export const Name = styled.p`
   font-size: 18px;
   font-weight: 600;
 `
-export const IsOnline = styled.span`
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0 20px;
-  background-color: red;
-`
-export const IsOffline = styled.span`
-  width: 15px;
-  height: 15px;
-  border-radius: 50%;
-  margin: 0 20px;
-  background-color: green;
-  `
 

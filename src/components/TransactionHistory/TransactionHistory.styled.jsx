@@ -12,13 +12,13 @@ export const TransactionHistoryTable = styled.table`
 export const TableHeader = styled.th`
   padding: 10px;
   text-align: center;
-  border-bottom: 1px solid #ddd;
+  border-bottom: 1px solid #d4d4d4;
   background-color: #f19aa1;
 `
 export const TableData = styled.td`
   padding: 8px;
   text-align: center;
-  border: 1px solid #ddd;
+  border: 1px solid #d4d4d4;
 `
 export const TableRow = styled.tr`
 :nth-of-type(even) {
